@@ -5,17 +5,43 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="tic-tac-toe game"
+    <meta name="tic-tac-toe game" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <script>
+      //Change Favicon
+      function toggleFavicon() {
+        const favicon = document.querySelector("link[rel='icon']");
+        const currentFavicon = favicon.href;
+        const newFavicon = currentFavicon.includes("faviconCroix.svg")
+          ? "faviconRond.svg"
+          : "faviconCroix.svg";
+        favicon.href = newFavicon;
+      }
+      setInterval(toggleFavicon, 500);
+
+      //Change Title
+      function restoreOriginalTitle() {
+        document.title = "Tic-Tac-Toe";
+      }
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "hidden") {
+          document.title = "Come Back !";
+        } else if (document.visibilityState === "visible") {
+          restoreOriginalTitle();
+        }
+      });
+    </script>
   </body>
 </html>
