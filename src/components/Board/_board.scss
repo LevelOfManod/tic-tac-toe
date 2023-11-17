@@ -1,0 +1,38 @@
+.board {
+  box-shadow: $mainShadowBox;
+  border: 1px solid $maiColorGray200;
+  position: relative;
+}
+
+.boardRow {
+  height: 33.33%;
+}
+
+.target {
+  margin: auto;
+}
+
+#winner {
+  display: none;
+}
+
+.winnerArea {
+  @include absolute-el(50%, 50%, -50%, -50%);
+  height: 75%;
+  width: 75%;
+  box-shadow: $mainShadowBox2;
+  background: $mainColorWhite;
+}
+
+.btnRestart {
+  background: $mainColorNavyBlue;
+  color: $mainColorWhite;
+  padding: 16px 32px;
+  &:active {
+    background: $mainColorSkyBlue;
+  }
+}
+
+.tag {
+  font-size: 42px;
+}

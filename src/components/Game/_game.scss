@@ -1,0 +1,29 @@
+.game {
+  height: 80%;
+}
+.status {
+  background: $mainColorNavyBlue;
+  color:$mainColorWhite;
+  padding: 16px 32px;
+}
+
+.settings {
+  min-height: 100%;
+  border: 2px solid $maiColorGray200;
+  padding: 32px;
+  box-shadow: $mainShadowBox;
+}
+
+.btnMove {
+  padding: 16px 32px;
+  border: 1px dashed  $maiColorGray300;
+  box-shadow:$mainShadowBox;
+
+  &:hover {
+    background: $mainColorGray;
+  }
+  &:active {
+    background: $mainColorNavyBlue;
+    color:$mainColorWhite;
+  }
+}

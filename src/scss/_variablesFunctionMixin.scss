@@ -1,0 +1,29 @@
+//-------------------------------------
+//Color
+//-------------------------------------
+$mainColorWhite: #fff;
+$mainColorGray: #f6f8fb;
+$maiColorGray200: #e1e8ee;
+$maiColorGray300: #9eb0be;
+$mainColorNavyBlue: #1b3448;
+$mainColorSkyBlue: #5bbfea;
+//-------------------------------------
+//Shadow
+//-------------------------------------
+$mainShadowBox: 0px 2px 4px 0px rgba(0, 0, 0, 0.08),
+  0px 0px 6px 0px rgba(0, 0, 0, 0.02);
+$mainShadowBox2: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+//-------------------------------------
+//Font
+//-------------------------------------
+$mainFontBody: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+//-------------------------------------
+//Function & Condition
+//-------------------------------------
+@mixin absolute-el($top, $left, $x, $y) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($x, $y);
+}
